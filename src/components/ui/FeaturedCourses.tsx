@@ -54,7 +54,7 @@ const FeaturedCourses = ({
         </div>
         
         {type === "featured" && courses.length > 0 ? (
-          <div className="space-y-6">
+          <div className="sgrid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {courses.map((course) => (
               <CourseCard key={course.id} course={course} featured={true} />
             ))}

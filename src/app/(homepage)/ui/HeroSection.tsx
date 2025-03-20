@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { categories } from "@/lib/data";
 import { LineShadowText } from "@/components/magicui/line-shadow-text";
 import { AuroraText } from "@/components/magicui/aurora-text";
+import { TextAnimate } from "@/components/magicui/text-animate";
 
 const HeroSection = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -17,13 +18,10 @@ const HeroSection = () => {
 
   return (
     <section className="relative pt-20 pb-16 overflow-hidden">
-      {/* Background gradient */}
       <div 
         className="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-900 dark:to-gray-800"
         aria-hidden="true"
       />
-      
-      {/* Decorative circles */}
       <div 
         className="absolute top-0 left-1/4 w-64 h-64 bg-primary/5 rounded-full mix-blend-multiply filter blur-3xl opacity-70"
         aria-hidden="true"
@@ -41,10 +39,9 @@ const HeroSection = () => {
           Learning that gets you
         </Badge>
         
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 animate-slide-up" style={{ animationDelay: "100ms" }}>
-          Skills for your present <br className="hidden md:block" />
-          <span className="text-primary italic">and your future</span>
-        </h1>
+        <TextAnimate  className="text-4xl md:text-5xl lg:text-7xl md:w-2/3 font-extrabold  tracking-tight mb-6 animate-slide-up" style={{ animationDelay: "100ms" }}>
+          Skills for your present and your future
+        </TextAnimate>
         
         <p className="text-xl text-muted-foreground max-w-2xl mb-8 animate-slide-up" style={{ animationDelay: "200ms" }}>
           Expand your potential with expert-led courses across development, business,
